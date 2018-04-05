@@ -1,0 +1,30 @@
+.navA{
+         color:white !important;
+
+}
+.userA{
+         color: white !important;
+
+}
+
+/* Common Classes */
+.hidden{
+    display: none;
+}
+.float-right{
+    float: right;
+}
+.bg-ws{
+    background-color: whitesmoke;
+}
+.height-250{
+    height: 250px;
+}
+.text-center{
+    text-align: center;
+}
+.step-section{
+    padding: 20px;
+    margin-top: 30px;
+}
+

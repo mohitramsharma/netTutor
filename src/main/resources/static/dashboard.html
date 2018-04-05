@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title> Online Tuting Application</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+</head>
+<body>
+
+<div class="teal">
+<div class="container">
+  <div style="float:right">
+    <!-- Dropdown Trigger -->
+    <a class='dropdown-button userA' href='#' data-activates='dropdownUser'>
+      <span style="float: right;
+                padding-left: 11px;">
+        <i class="material-icons">account_circle</i>
+      </span>
+      Hi, User!</a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdownUser' class='dropdown-content userA'>
+      <li><a href="#!" id="logoutBtn"><i class="material-icons">exit_to_app</i>Log off</a></li>
+    </ul>
+
+  </div>
+
+    <ul id="slide-out" class="side-nav">
+    <li>
+      <div class="user-view teal" style="background: #ff9800;">
+      <a href="#!user"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!name"><span class="white-text name">Admin User</span></a>
+      </div>
+    </li>
+    <li><a href="#!"><i class="material-icons" href="sessions.html">live_tv</i>Live sessions</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#!" id="tutorSection">Users</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#!">Session</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#!">Subscription</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#!">Account Setting</a></li>
+    <li><a class="waves-effect" href="#!">Preferences</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse bt"><i class="material-icons navA">menu</i></a>
+
+
+</div>
+
+</div>
+
+<div class="container">
+    <!--Tutor Section-->
+    <div class="section section-tutor" id="section-tutor">
+      <div>
+        <!-- Modal Trigger: Add tutor Modal -->
+        <a  class="btn-floating btn-large waves-effect waves-light red modal-trigger hidden" href="#modalAddTutor"
+           style="float: right;">
+          <i class="material-icons">add</i></a>
+
+      </div>
+
+      <div>
+        <table class="responsive-table highlight" id="userTable">
+          <table cellpadding="0" cellspacing="0" border="0" class="dataTable table table-striped hidden" id="example">
+          </table>
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+          </tr>
+          </thead>
+
+
+          <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--/ Tutor Section-->
+    <br><br>
+</div>
+
+<div id="userSection">
+
+  <h3>UserList</h3>
+  <hr>
+
+  <div id="userListDiv">
+
+  </div>
+
+
+</div>
+
+
+
+<!-- Modal Add Tutor -->
+<div id="modalAddTutor" class="modal">
+  <div class="modal-content">
+    <h4>Add User</h4>
+    <p>Please fill information</p>
+
+    <div class="input-field col s12">
+      <select id="roleSelect">
+        <option value="" disabled selected>Choose Role</option>
+      </select>
+      <label>Choose Role</label>
+    </div>
+
+    <div class="row">
+      <form class="col s12">
+
+        <!-- Dropdown Trigger -->
+        <!--<a class='dropdown-button btn' href='#' data-activates='roleDrop'>Role</a>-->
+
+        <!-- Dropdown Structure -->
+       <!-- <ul id='roleDrop' class='dropdown-content'>
+        </ul>-->
+
+
+
+
+        <label id="roleOptLbl"></label>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+
+        
+      </form>
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <a href="#!" class="waves-light btn modal-close waves-effect waves-red btn-flat">Close</a>
+    <a href="#!" id="saveUserBtn" class="waves-light btn waves-effect waves-blue btn-flat">Save</a>
+  </div>
+</div>
+
+
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Copyright <a class="orange-text text-lighten-3" href="http://materializecss.com">@Anonymous 2018</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dash.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/dataTables-1.10.16/css/dataTables.bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="css/dataTables-1.10.16/css/jquery.dataTables.min.css"/>
+
+  <script type="text/javascript" src="js/dataTables-1.10.16/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/dataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+
+<script>
+
+</script>
+  </body>
+</html>

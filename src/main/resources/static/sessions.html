@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title> Online Tuting Application</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/bootstrap-grid.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+</head>
+<body>
+
+<div class="teal">
+    <div class="container">
+        <div style="float:right">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button userA' href='#' data-activates='dropdownUser'>
+      <span style="float: right;
+                padding-left: 11px;">
+        <i class="material-icons">account_circle</i>
+      </span>
+                Hi, User!</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdownUser' class='dropdown-content userA'>
+                <li><a href="#!" id="logoutBtn"><i class="material-icons">exit_to_app</i>Log off</a></li>
+            </ul>
+
+        </div>
+
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="user-view teal" style="background: #ff9800;">
+                    <a href="#!user"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!name"><span class="white-text name">Admin User</span></a>
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">live_tv</i>Live sessions</a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="#!" id="tutorSection">Users</a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="#!">Session</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="#!">Subscription</a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="#!">Account Setting</a></li>
+            <li><a class="waves-effect" href="#!">Preferences</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse bt"><i class="material-icons navA">menu</i></a>
+
+
+    </div>
+
+</div>
+
+
+<!--Step One-->
+<div id="step-one" class="container hidden">
+    <!--Join Session Section-->
+    <div id="sub-step-one" class="bg-ws step-section col-sm-6 height-250">
+
+            <div class="text-center">
+                <h5><i class="material-icons">ondemand_video</i>
+                    Join a Session</h5>
+                <hr>
+            </div>
+
+            <div class="section">
+                <div class="input-field">
+                    <input placeholder="Calculas" id="first_name" type="text" class="validate">
+                    <label for="first_name" class="active">Session Id</label>
+                </div>
+                <button class="btn-flat float-right white-text teal">Join</button>
+            </div>
+
+    </div>
+
+
+    <!--Create Session Section-->
+    <div id="pub-step-one" class="bg-ws step-section col-sm-6 height-250">
+
+        <div class="text-center">
+            <h5><i class="material-icons">ondemand_video</i>
+                Create a Session</h5>
+            <hr>
+        </div>
+
+        <div class="section">
+            <div class="input-field">
+                <input placeholder="maths sess.." id="sessionName" type="text" class="validate">
+                <label for="SessionName" class="active">Session Name</label>
+            </div>
+            <button class="btn-flat float-right white-text teal">Go Live</button>
+        </div>
+
+    </div>
+
+
+</div>
+<!--Step One-->
+
+
+<!--Step two-->
+<div id="step-two" class="hidden">
+
+    <!--Wrapper-->
+    <div>
+        <!--Session Controls-->
+        <div>
+            <button class="btn-flat">Stop/End</button>
+        </div>
+        <!--Session Controls-->
+
+        <!--Subscriber's feed-->
+        <div>
+            <!--List of active subs-->
+            <div>
+
+            </div>
+        </div>
+        <!--Subscriber's feed-->
+
+
+        <!--Chat Section left Side-->
+        <div class="chatSection">
+
+            <!--Chat Message Section-->
+            <div class="chatMessageWrapper">
+                <span class="their">Hi, How are you?</span>
+                <span class="mine">I am fine.Thanks</span>
+            </div>
+            <!--Chat Message Section-->
+
+            <!--Chat input section-->
+            <div>
+                <textarea id="chatMessage" placeholder="Write your message"></textarea>
+                <button class="btn-flat">Send</button>
+
+            </div>
+            <!--Chat input section-->
+        </div>
+        <!--Chat Section left Side-->
+
+    </div>
+    <!--Wrapper-->
+
+</div>
+<!--Step two-->
+
+
+<!--Start three-->
+<div id="step-three" class="container hidden">
+    <p>404 You crash Landed</p>
+    <button class="btn-flat"> Start Over</button>
+
+</div>
+<!--Start three-->
+
+
+<footer class="page-footer orange">
+    <div class="container">
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright <a class="orange-text text-lighten-3" href="http://materializecss.com">@Anonymous 2018</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="js/auth.js"></script>
+<script type="text/javascript" src="js/opentok.min.js"></script>
+<script type="text/javascript" src="js/dataTables-1.10.16/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/dataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+<script src="js/sessions.js"></script>
+<script src="js/sessions-impl.js"></script>
+<script src="js/otSession.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/dataTables-1.10.16/css/dataTables.bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/dataTables-1.10.16/css/jquery.dataTables.min.css"/>
+
+</body>
+</html>
